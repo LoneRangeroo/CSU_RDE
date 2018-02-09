@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'RIS/css/bootstrap.min.css' %}">
+<head>
+	<title>RIS HOME</title>
+	<div>
+		<nav>
+			<u>
+				<li><a href="{% url 'RIS:Add_Res' %}">Add Research</a></li>
+				<li><a href="{% url 'RIS:View_Res' %}">View Research</a></li>
+			</u>
+		</nav>
+	</div>
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

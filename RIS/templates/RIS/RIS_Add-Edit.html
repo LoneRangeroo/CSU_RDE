@@ -1,0 +1,129 @@
+{% extends 'RIS/RIS_Home.html' %}
+{% block body %}
+<div class="container">
+	<form method="post" class="">
+		<div class="form-group">
+			{% csrf_token %}
+			<div>
+				<label>Program Title</label>
+				<br>
+				{{ form.prog_title }}
+			</div>
+			<div>
+				<label>Project Title</label>
+				<br>
+				{{ form.proj_title }}
+			</div>
+			<div>
+				<label>Study Title</label>
+				<br>
+				{{ form.stud_title }}
+			</div>
+			<div>
+				<label>Program Leader</label>
+				<br>
+				{{ form.prog_lead }}
+			</div>
+			<div>
+				<label>Study Leader</label>
+				<br>
+				{{ form.stud_lead }}
+			</div>
+			<div>
+				<label>Co-Researcher/s</label>
+				<br>
+				{{ form.co_res }}
+			</div>
+			<div>
+				<label>Site / Location of study</label>
+				<br>
+				{{ form.res_site }}
+			</div>
+			<div>
+				<label>Campus</label>
+				<br>
+				{{ form.campus }}
+			</div>
+			<div>
+				<label>Category of Research</label>
+				<br>
+				{{ form.category_res }}
+			</div>
+			<div>
+				<label>Classification of Research</label>
+				<br>
+				{{ form.res_classif }}
+			</div>
+			<div>
+				<label>Amount Granted</label>
+				<br>
+				{{ form.amt_granted }}
+			</div>
+			<div>
+				<label>Status of Research</label>
+				<br>
+				{{ form.res_status }}
+			</div>
+			<div>
+				<label>Date Started</label>
+				<br>
+				{{ form.date_started }}
+				
+				{{ dtp.month }}
+				{{ dtp.day }}
+			</div>
+			<div>
+				<label>Date Completed</label>
+				<br>
+				{{ form.date_completed }}
+			</div>
+			<div class="row">
+				<label>Is the research published?</label>
+				<br>
+				{{ form.res_pubstat }}
+				<div class="col">
+					<label>If yes, Name of Journal </label>
+					{{ form.res_JN }}
+				</div>
+				<div class="col">
+					<label>Volume</label>
+					{{ form.res_JV }} 
+				</div>
+				<div class="col">
+					<label>Date Published </label>
+					{{ form.date_pub }}
+				</div>
+			</div>
+			<div class="row">
+				<label>Does the research have IPR application ?</label>
+				<br>
+				{{ form.res_pubstat }}
+				<div class="col">
+					<label>If Yes, Application Type</label>
+					{{ form.apptype }}
+				</div>
+				<div class="col">
+					<label>Date of Application</label>
+					{{ form.date_appl }}
+				</div>
+				<div class="col">
+					<label>Date of Approval of application</label>
+					{{ form.pprv }}
+				</div>
+				<br>
+				<div class="col">
+					<label>Is the application Pending? </label>
+					{{ form.app_pending }}
+				</div>
+			</div>
+			<div>
+				<label>Abstract of the study</label>
+				<br>
+				{{ form.res_abs }}
+			</div>	
+		</div>
+		
+		<button type="submit">SAVE</button>
+	</form>
+</div>
+{% endblock %}
