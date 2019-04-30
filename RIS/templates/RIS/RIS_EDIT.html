@@ -1,8 +1,0 @@
-
-{% block body %} 
-	<form action="{% url 'RIS:Edit_Res' %}" method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">SAVE</button>
-	</form>
-{% endblock %}
